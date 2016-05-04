@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+  <script src="../js/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+
+</head>
+<body>
+<!-- ===============head===========	 -->
+  <div class="top">
+     <div class="head">
+        <a href="#" class="left bodr-1">注册</a>
+        <a href="#" class="left">登录</a>
+        <a href="#" class="left">订单查询</a>
+  	    <div class="topRight">
+         客服热线: 400-600-6188
+         <a href="#" class="starBox"><div class="star"></div>关注我们</a>
+         <a href="#" class="bagBox"><span class="bagBg"></span>购物袋（0）|<span class="trigon"></span></a>
+         <!-- 两个滑动显示的hover -->
+          <div class="sina"><!-- 关注微信微博 -->
+            
+          </div>
+          <script type="text/javascript">
+            $('.starBox').mouseover(function(){
+              $('.sina').css('display','block');
+              console.log(1)
+            });
+           $('.starBox').mouseout(function(){
+                $('.sina').css('display','none')
+            });
+            $('.sina').mouseover(function(){
+              $('.starBox').unbind('mouseout');
+                $(this).css('display','block');
+                });
+            $('.sina').mouseout(function(){
+              $('.sina').css('display','none');
+               $('.starBox').mouseout(function(){
+                $('.sina').css('display','none')
+               });
+            });
+          </script>
+          <div class="shopB"><!-- 提示购物袋为空 -->
+            您的购物袋是空的！！
+          </div>
+           <script type="text/javascript">
+            $('.bagBox').mouseover(function(){
+              $(this).css({'background':'#ffffff','border':'1px solid #afafaf','borderBottom':'#ffffff'})
+              $('.shopB').css('display','block');
+              console.log(1)
+            });
+           $('.bagBox').mouseout(function(){
+            $(this).css({'background':'','border':'none'})
+                $('.shopB').css('display','none')
+            });
+            $('.shopB').mouseover(function(){
+              $('.bagBox').unbind('mouseout');
+              $('.bagBox').css({'background':'#ffffff','border':'1px solid #afafaf','borderBottom':'#ffffff'})
+                $(this).css('display','block');
+                });
+            $('.shopB').mouseout(function(){
+              $('.shopB').css('display','none');
+               $('.bagBox').css({'background':'','border':'none'})
+               $('.bagBox').mouseout(function(){
+                $(this).css({'background':'','border':'none'})
+                $('.shopB').css('display','none')
+               });
+            });
+          </script>
+        </div>
+     </div>
+  </div>
+<!-- ============logo===============  -->
+ <div class="logoBox">
+   <a href="#" class="logo1"></a>
+   <div class="logo2"></div>
+   <a href="#" class="logo3"></a>
+   <form class="search"><!-- 搜索框 -->
+     <input type="text" class="searchtxt">
+     <input type="button" class="searchbtn">
+   </form>
+ </div>
+<!-- ======nav导航条===== -->
+  <div class="navBox">
+    <ul class="navs">
+      <li>首页</li>
+      <li>新近单品</li>
+      <li>女士</li>
+      <li>男士</li>
+      <li>品牌</li>
+      <li>新锐设计</li>
+      <li>礼品</li>
+      <li>特惠区</li>
+      <li class="navlast"><span>M</span>杂志</li>
+    </ul>
+  </div>
+<!-- =========foot====== -->
+ <div class="foote">
+    <div class="footop">
+      <ul class="shop"><!-- shopstart -->
+        <li>
+          <h4>购物指南</h4>
+        </li>
+        <li><a href="">购物流程</a></li>
+        <li><a href="">配送方式</a></li>
+      </ul>
+      <ul class="shop">
+        <li>
+          <h4>购物指南</h4>
+        </li>
+        <li><a href="">购物流程</a></li>
+        <li><a href="">配送方式</a></li>
+      </ul>
+      <ul class="shop">
+        <li>
+          <h4>购物指南</h4>
+        </li>
+        <li><a href="">购物流程</a></li>
+        <li><a href="">配送方式</a></li>
+      </ul>
+      <ul class="shop">
+        <li>
+          <h4>购物指南</h4>
+        </li>
+        <li><a href="">购物流程</a></li>
+        <li><a href="">配送方式</a></li>
+      </ul><!-- shopendend -->
+      <div class="tel"><!-- 订购热线 -->
+        <h4>订购热线</h4>
+        <h4>400-800-1234</h4>
+      </div>
+      <div class="tel kefu"><!-- 在线客服 -->
+        <h4>在线客服</h4>
+        <div class="qq">
+          <span class="qqs"></span>
+          <span class="tels"></span>
+        </div>
+      </div>
+      <!-- 美西APP -->
+      <div class="app">
+        <strong>美西时尚app</strong><br/>
+        <a href="#"></a>
+      </div>
+      <div class="weixin">
+        <strong>关注我们</strong><br/>
+        <a href="#"></a>
+      </div>
+    </div>
+    <!-- footopendend-->
+    <ul class="footul">
+      <li class="ftul">首页</li>
+      <li>关于美西</li>
+      <li>媒体报道</li>
+      <li>关于美西</li>
+      <li>媒体报道</li>
+      <li>关于美西</li>
+      <li>媒体报道</li>
+      <li>关于美西</li>
+      <li>媒体报道</li>
+    </ul>
+   <!-- 支付宝 -->
+   <div class="zfbao">
+   </div>
+   <!-- 版权信息 -->
+   <p class="bqxinxi">Copyright © 2008-2016 美西时尚-<a href="">中国值得信赖的奢侈品购物网站</a><br/><a href="#">沪ICP备09001221号</a>
+   </p>
+   <!-- 安全验证 -->
+   <div class="anq">
+     <div class="anqlt"></div>
+     <div class="anqrt"></div>
+   </div>
+ </div>
+
+</body>
+</html>

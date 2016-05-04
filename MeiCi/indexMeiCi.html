@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body>
+<!-- ===============head===========	 -->
+  <div class="top">
+     <div class="head">
+        <a href="#" class="left bodr-1">注册</a>
+        <a href="#" class="left">登录</a>
+        <a href="#" class="left">订单查询</a>
+  	    <div class="topRight">
+         客服热线: 400-600-6188
+         <a href="#" class="starBox"><div class="star"></div>关注我们</a>
+         <a href="#" class="bagBox"><span class="bagBg"></span>购物袋（0）|<span class="trigon"></span></a>
+         <!-- 两个滑动显示的hover -->
+          <div class="sina"><!-- 关注微信微博 -->
+            
+          </div>
+          <script type="text/javascript">
+            $('.starBox').mouseover(function(){
+              $('.sina').css('display','block');
+              console.log(1)
+            });
+           $('.starBox').mouseout(function(){
+                $('.sina').css('display','none')
+            });
+            $('.sina').mouseover(function(){
+              $('.starBox').unbind('mouseout');
+                $(this).css('display','block');
+                });
+            $('.sina').mouseout(function(){
+              $('.sina').css('display','none');
+               $('.starBox').mouseout(function(){
+                $('.sina').css('display','none')
+               });
+            });
+          </script>
+          <div class="shopB"><!-- 提示购物袋为空 -->
+            您的购物袋是空的！！
+          </div>
+           <script type="text/javascript">
+            $('.bagBox').mouseover(function(){
+              $(this).css({'background':'#ffffff','border':'1px solid #afafaf','borderBottom':'#ffffff'})
+              $('.shopB').css('display','block');
+              console.log(1)
+            });
+           $('.bagBox').mouseout(function(){
+            $(this).css({'background':'','border':'none'})
+                $('.shopB').css('display','none')
+            });
+            $('.shopB').mouseover(function(){
+              $('.bagBox').unbind('mouseout');
+              $('.bagBox').css({'background':'#ffffff','border':'1px solid #afafaf','borderBottom':'#ffffff'})
+                $(this).css('display','block');
+                });
+            $('.shopB').mouseout(function(){
+              $('.shopB').css('display','none');
+               $('.bagBox').css({'background':'','border':'none'})
+               $('.bagBox').mouseout(function(){
+                $(this).css({'background':'','border':'none'})
+                $('.shopB').css('display','none')
+               });
+            });
+          </script>
+        </div>
+     </div>
+  </div>
+<!-- ============logo===============  -->
+ <div class="logoBox">
+   <a href="#" class="logo1"></a>
+   <div class="logo2"></div>
+   <a href="#" class="logo3"></a>
+   <form class="search"><!-- 搜索框 -->
+     <input type="text" class="searchtxt">
+     <input type="button" class="searchbtn">
+   </form>
+ </div>
+<!-- ======nav导航条===== -->
+  <div class="navBox">
+    <ul class="navs">
+      <li>首页</li>
+      <li>新近单品</li>
+      <li>女士</li>
+      <li>男士</li>
+      <li>品牌</li>
+      <li>新锐设计</li>
+      <li>礼品</li>
+      <li>特惠区</li>
+      <li class="navlast"><span>M</span>杂志</li>
+    </ul>
+  </div><!-- end -->
+  <!-- hover list -->
+  <div class="hoverBox">
+    <!-- 新近单品 -->
+    <div class="hoverList">
+          <dl class="dlfirst">
+             <dt>
+               <h4>今日上新</h4>
+               <h4>昨日上新</h4>
+               <h4>本周上新</h4>
+              </dt>
+              <dd>
+                <a href="#">所有男士新品</a>
+                <a href="#">所有女士新品</a>
+              </dd>
+          </dl>
+          <dl>
+             <dt><h4>新近单品 New</h4></dt>
+             <dd>今日上新 Today</dd>
+             <dd>昨日上新 Yesterday</dd>
+             <dd>本周推荐 Week</dd>
+             <dd>今日上新 Today</dd>
+             <dd>昨日上新 Yesterday</dd>
+             <dd>本周推荐 Week</dd>
+          </dl>
+          <dl>
+             <dt><h4>新近单品 New</h4></dt>
+             <dd>今日上新 Today</dd>
+             <dd>昨日上新 Yesterday</dd>
+             <dd>本周推荐 Week</dd>
+             <dd>今日上新 Today</dd>
+             <dd>昨日上新 Yesterday</dd>
+             <dd>本周推荐 Week</dd>
+          </dl>
+          <!-- 眼睛图片 -->
+          <dl class="glasses">
+             <dt><h4>今日推荐单品</h4></dt>
+             
+               <img src="images/yanjing.jpg" alt="">
+             <div>Rayban 雷朋</br>金属  太阳眼镜</div>
+             
+          </dl>
+          <dl class="glasses">
+             <dt><h4></h4></dt>
+             
+               <img src="images/yanjing2.jpg" alt="">
+             <div>Michael Kors 迈克高仕</br>牛皮 女士 长钱包</div>
+             
+          </dl>
+          <dl class="glasses">
+             <dt><h4></h4></dt>
+             
+               <img src="images/yanjing3.jpg" alt="">
+             <div>Michael Kors 迈克高仕</br>牛皮 女士 长钱包</div>
+             
+          </dl>
+          <script>
+          $(function(){
+            $('.glasses').mouseover(function(){
+                $(this).css({'cursor':'pointer'}).find('div').css({'color':'#8E0C3A'});
+                $(this).mouseout(function(){
+                  $(this).find('div').css({'color':'#afafaf'});
+                })
+            })  
+          })
+          </script>
+    </div>
+    <!-- 女士 -->
+    <div class="hoverList">
+        <dl>
+             <dt><h4>包袋 Bags</h4></dt>
+             <dd>所有包袋</dd>
+             <dd>手提包 Totes</dd>
+             <dd>单肩包 Shoulder Bags</dd>
+             <dd>斜挎包 Messenger Bags</dd>
+             <dd>手拿包 Clutch Bags</dd>
+             <dd>旅行包 Travel Bags</dd>
+        </dl>
+        <dl>
+             <dt><h4>配饰 Accessories</h4></dt>
+             <dd>所有配饰 Today</dd>
+             <dd>钱包 Wallets</dd>
+             <dd>手表 Watches</dd>
+             <dd>太阳眼镜 Sunglasses</dd>
+             <dd>围巾 Scarf</dd>
+             <dd>小配件 Small Acc</dd>
+             <dd>数码周边 Technology</dd>
+             <dd>饰品 Jewelry</dd>
+             <dd>腰带 Belts</dd>
+        </dl>
+        <dl>
+             <dt><h4>鞋履 Shoes</h4></dt>
+             <dd>所有鞋履 Small Acc</dd>
+             <dd>平底鞋 Flat Shoes</dd>
+             <dd>高跟鞋 Pumps</dd>
+             <dd>服装 Clothes</dd>
+        </dl>
+        <dl>
+             <dt><h4>服装 Clothes</h4></dt>
+             <dd>所有服装 Today</dd>
+             <dd>卫衣 Hoodies</dd>
+             <dd>衬衫 Shirt</dd>
+             <dd>太阳眼镜 Sunglasses</dd>
+             <dd>围巾 Scarf</dd>
+             <dd>小配件 Small Acc</dd>
+             <dd>夹克 Jacket</dd>
+              <dd>针织/毛衫 Knit/Sweater</dd>
+             <dd>大衣/风衣 Coat/Dust Coat</dd>
+        </dl>
+        <dl>
+          <a href="#"><img src="images/wemen.jpg" alt="" width="306px";></a>
+        </dl>
+    </div>
+     <!-- 男士 -->
+    <div class="hoverList">
+        <dl>
+             <dt><h4>包袋 Bags</h4></dt>
+             <dd>所有包袋</dd>
+             <dd>手提包 Totes</dd>
+             <dd>单肩包 Shoulder Bags</dd>
+             <dd>斜挎包 Messenger Bags</dd>
+             <dd>手拿包 Clutch Bags</dd>
+             <dd>旅行包 Travel Bags</dd>
+        </dl>
+        <dl>
+             <dt><h4>配饰 Accessories</h4></dt>
+             <dd>所有配饰 Today</dd>
+             <dd>钱包 Wallets</dd>
+             <dd>手表 Watches</dd>
+             <dd>太阳眼镜 Sunglasses</dd>
+             <dd>饰品 Jewelry</dd>
+             <dd>腰带 Belts</dd>
+             <dd>围巾 Scarf</dd>
+             <dd>小配件 Small Acc</dd>
+             <dd>数码周边 Technology</dd>
+        </dl>
+        <dl>
+             <dt><h4>鞋履 Shoes</h4></dt>
+             <dd>所有鞋履 Small Acc</dd>
+             <dd>平底鞋 Flat Shoes</dd>
+             <dd>高跟鞋 Pumps</dd>
+             <dd>服装 Clothes</dd>
+        </dl>
+        <dl>
+             <dt><h4>服装 Clothes</h4></dt>
+             <dd>所有服装 Today</dd>
+             <dd>卫衣 Hoodies</dd>
+             <dd>衬衫 Shirt</dd>
+             <dd>太阳眼镜 Sunglasses</dd>
+             <dd>针织/毛衫 Knit/Sweater</dd>
+             <dd>大衣/风衣 Coat/Dust Coat</dd>
+             <dd>围巾 Scarf</dd>
+             <dd>小配件 Small Acc</dd>
+             <dd>夹克 Jacket</dd>
+        </dl>
+        <dl>
+          <a href="#"><img src="images/man.jpg" alt="" width="306px";></a>
+        </dl>
+    </div>
+     <!-- 品牌 -->
+    <div class="hoverList">
+          <dl class="dlfirst">
+             <dt>
+               <h4>今日上新</h4>
+               <h4>昨日上新</h4>
+               <h4>本周上新</h4>
+              </dt>
+              <dd>
+                <a href="#">所有男士新品</a>
+                <a href="#">所有女士新品</a>
+              </dd>
+          </dl>
+          <dl>
+             <dt><h4>新近单品 New</h4></dt>
+             <dd>今日上新 Today</dd>
+             <dd>昨日上新 Yesterday</dd>
+             <dd>本周推荐 Week</dd>
+             <dd>今日上新 Today</dd>
+             <dd>昨日上新 Yesterday</dd>
+             <dd>本周推荐 Week</dd>
+          </dl>
+          <dl>
+             <dt><h4>新近单品 New</h4></dt>
+             <dd>今日上新 Today</dd>
+             <dd>昨日上新 Yesterday</dd>
+             <dd>本周推荐 Week</dd>
+             <dd>今日上新 Today</dd>
+             <dd>昨日上新 Yesterday</dd>
+             <dd>本周推荐 Week</dd>
+          </dl>
+          <!-- 眼睛图片 -->
+          <dl class="glasses">
+             <dt><h4>今日推荐单品</h4></dt>
+             
+               <img src="images/yanjing.jpg" alt="">
+             <div>Rayban 雷朋</br>金属  太阳眼镜</div>
+             
+          </dl>
+          <dl class="glasses">
+             <dt><h4></h4></dt>
+             
+               <img src="images/yanjing2.jpg" alt="">
+             <div>Michael Kors 迈克高仕</br>牛皮 女士 长钱包</div>
+             
+          </dl>
+          <dl class="glasses">
+             <dt><h4></h4></dt>
+             
+               <img src="images/yanjing3.jpg" alt="">
+             <div>Michael Kors 迈克高仕</br>牛皮 女士 长钱包</div>
+             
+          </dl>
+          <script>
+          $(function(){
+            $('.glasses').mouseover(function(){
+                $(this).css({'cursor':'pointer'}).find('div').css({'color':'#8E0C3A'});
+                $(this).mouseout(function(){
+                  $(this).find('div').css({'color':'#afafaf'});
+                })
+            })  
+          })
+          </script>
+    </div>
+     <!-- 新锐设计 -->
+    <div class="hoverList">
+        <dl>
+             <dt><h4>包袋 Bags</h4></dt>
+             <dd>所有包袋</dd>
+             <dd>手提包 Totes</dd>
+             <dd>单肩包 Shoulder Bags</dd>
+             <dd>斜挎包 Messenger Bags</dd>
+             <dd>手拿包 Clutch Bags</dd>
+             <dd>旅行包 Travel Bags</dd>
+        </dl>
+        <dl>
+             <dt><h4>配饰 Accessories</h4></dt>
+             <dd>所有配饰 Today</dd>
+             <dd>钱包 Wallets</dd>
+             <dd>手表 Watches</dd>
+             <dd>太阳眼镜 Sunglasses</dd>
+             <dd>饰品 Jewelry</dd>
+             <dd>腰带 Belts</dd>
+             <dd>围巾 Scarf</dd>
+             <dd>小配件 Small Acc</dd>
+             <dd>数码周边 Technology</dd>
+        </dl>
+        <dl>
+             <dt><h4>鞋履 Shoes</h4></dt>
+             <dd>所有鞋履 Small Acc</dd>
+             <dd>平底鞋 Flat Shoes</dd>
+             <dd>高跟鞋 Pumps</dd>
+             <dd>服装 Clothes</dd>
+        </dl>
+        <dl>
+             <dt><h4>服装 Clothes</h4></dt>
+             <dd>所有服装 Today</dd>
+             <dd>卫衣 Hoodies</dd>
+             <dd>衬衫 Shirt</dd>
+             <dd>太阳眼镜 Sunglasses</dd>
+             <dd>针织/毛衫 Knit/Sweater</dd>
+             <dd>大衣/风衣 Coat/Dust Coat</dd>
+             <dd>围巾 Scarf</dd>
+             <dd>小配件 Small Acc</dd>
+             <dd>夹克 Jacket</dd>
+        </dl>
+        <dl>
+          <a href="#"><img src="images/man.jpg" alt="" width="306px";></a>
+        </dl>
+    </div>
+     <!-- 礼品 -->
+    <div class="hoverList">
+        <dl>
+             <dt><h4>包袋 Bags</h4></dt>
+             <dd>所有包袋</dd>
+             <dd>手提包 Totes</dd>
+             <dd>单肩包 Shoulder Bags</dd>
+             <dd>斜挎包 Messenger Bags</dd>
+             <dd>手拿包 Clutch Bags</dd>
+             <dd>旅行包 Travel Bags</dd>
+        </dl>
+        <dl>
+             <dt><h4>配饰 Accessories</h4></dt>
+             <dd>所有配饰 Today</dd>
+             <dd>钱包 Wallets</dd>
+             <dd>手表 Watches</dd>
+             <dd>太阳眼镜 Sunglasses</dd>
+             <dd>饰品 Jewelry</dd>
+             <dd>腰带 Belts</dd>
+             <dd>围巾 Scarf</dd>
+             <dd>小配件 Small Acc</dd>
+             <dd>数码周边 Technology</dd>
+        </dl>
+        <dl>
+             <dt><h4>鞋履 Shoes</h4></dt>
+             <dd>所有鞋履 Small Acc</dd>
+             <dd>平底鞋 Flat Shoes</dd>
+             <dd>高跟鞋 Pumps</dd>
+             <dd>服装 Clothes</dd>
+        </dl>
+        <dl>
+             <dt><h4>服装 Clothes</h4></dt>
+             <dd>所有服装 Today</dd>
+             <dd>卫衣 Hoodies</dd>
+             <dd>衬衫 Shirt</dd>
+             <dd>太阳眼镜 Sunglasses</dd>
+             <dd>针织/毛衫 Knit/Sweater</dd>
+             <dd>大衣/风衣 Coat/Dust Coat</dd>
+             <dd>围巾 Scarf</dd>
+             <dd>小配件 Small Acc</dd>
+             <dd>夹克 Jacket</dd>
+        </dl>
+        <dl>
+          <a href="#"><img src="images/man.jpg" alt="" width="306px";></a>
+        </dl>
+    </div>
+     <!-- 特惠区 -->
+    <div class="hoverList">
+        <dl>
+             <dt><h4>包袋 Bags</h4></dt>
+             <dd>所有包袋</dd>
+             <dd>手提包 Totes</dd>
+             <dd>单肩包 Shoulder Bags</dd>
+             <dd>斜挎包 Messenger Bags</dd>
+             <dd>手拿包 Clutch Bags</dd>
+             <dd>旅行包 Travel Bags</dd>
+        </dl>
+        <dl>
+             <dt><h4>配饰 Accessories</h4></dt>
+             <dd>所有配饰 Today</dd>
+             <dd>钱包 Wallets</dd>
+             <dd>手表 Watches</dd>
+             <dd>太阳眼镜 Sunglasses</dd>
+             <dd>饰品 Jewelry</dd>
+             <dd>腰带 Belts</dd>
+             <dd>围巾 Scarf</dd>
+             <dd>小配件 Small Acc</dd>
+             <dd>数码周边 Technology</dd>
+        </dl>
+        <dl>
+             <dt><h4>鞋履 Shoes</h4></dt>
+             <dd>所有鞋履 Small Acc</dd>
+             <dd>平底鞋 Flat Shoes</dd>
+             <dd>高跟鞋 Pumps</dd>
+             <dd>服装 Clothes</dd>
+        </dl>
+        <dl>
+             <dt><h4>服装 Clothes</h4></dt>
+             <dd>所有服装 Today</dd>
+             <dd>卫衣 Hoodies</dd>
+             <dd>衬衫 Shirt</dd>
+             <dd>太阳眼镜 Sunglasses</dd>
+             <dd>针织/毛衫 Knit/Sweater</dd>
+             <dd>大衣/风衣 Coat/Dust Coat</dd>
+             <dd>围巾 Scarf</dd>
+             <dd>小配件 Small Acc</dd>
+             <dd>夹克 Jacket</dd>
+        </dl>
+        <dl>
+          <a href="#"><img src="images/man.jpg" alt="" width="306px";></a>
+        </dl>
+    </div>
+    <!-- 杂志 -->
+    <div class="hoverList" id="magazine">
+        <dl>
+             <dt><h4>包袋 Bags</h4></dt>
+             <dd>所有包袋</dd>
+             <dd>手提包 Totes</dd>
+             <dd>单肩包 Shoulder Bags</dd>
+             <dd>斜挎包 Messenger Bags</dd>
+             <dd>手拿包 Clutch Bags</dd>
+             <dd>旅行包 Travel Bags</dd>
+        </dl>
+    </div>
+  </div><!-- hoverBox  end -->
+  <script>
+  $(function(){
+    var num = $('.navs li').length
+    var timer;
+    for (var i = 1; i < $('.navs li').length; i++) {
+      $('.navs li').eq(i).mouseover(function(){
+        var $that = $(this);
+        // 999999999999999999999999999999999999999999999999999999999
+          $('.hoverBox').css('display','block')
+          $('.hoverList').eq($(this).index()-1).css('display','block')
+           //---
+            $('.hoverList').eq($(this).index()-1).mouseover(function(){
+              $that.unbind("mouseout");
+              $(this).css('display','block');
+              $('.hoverBox').css('display','block')
+              console.log($(this).index());
+           })
+          //muoseout
+          $('.navs li').eq($that.index()).mouseout(function(){
+             if(timer){
+              clearTimeout(timer)
+            };
+             timer = setTimeout(function(){
+              $('.hoverBox').css('display','none')
+              $('.hoverList').eq($(this).index()-1).css('display','none');
+            
+             },1000)
+          })    
+      })
+       // $('.hoverList').eq(i-1).mouseover(function(){
+       //    $('.navs li').eq($(this).index()+1).unbind('mouseout')
+       //    $(this).css('display','block');
+    }//循环结束 
+  })
+  </script>
+
+    <!-- hoverRight -->
+    <div class="nonetop">
+      <div class="nonebox">
+        <a href="#">
+          <img src="images/nonetoplogo.jpg" alt="">
+        </a>
+        <form name="form1" class="noneform">
+          <input type="text" class="nonesearch">
+          <input type="button" class="nonebtm">
+        </form><!-- search  end -->
+        <div class="nonertbox">
+          <div class="noneright">
+            时尚导购
+          </div>
+        </div>
+      </div><!-- nonebox  end -->
+       <div class="nonenav">
+          <dl>
+             <dt><h4>新近单品 New</h4></dt>
+             <dd>今日上新 Today</dd>
+             <dd>昨日上新 Yesterday</dd>
+             <dd>本周推荐 Week</dd>
+          </dl>
+         <dl>
+           <dt><h4>男仕 Man</h4></dt>
+           <dd>所有男士商品 All Man</dd>
+           <dd>包袋 Bags</dd>
+           <dd>配饰 Accessories</dd>
+           <dd>鞋履 Shoes</dd>
+           <dd>服装 Clothes</dd>
+           <dd>女士 Woman</dd>
+         </dl>
+         <dl>
+           <dt><h4>女士 Woman</h4></dt>
+           <dd>所有女士商品 All Woman</dd>
+           <dd>包袋 Bags</dd>
+           <dd>配饰 Accessories</dd>
+           <dd>鞋履 Shoes</dd>
+           <dd>服装 Clothes</dd>
+           <dd>品牌 Brand</dd>
+         </dl>
+         <dl>
+             <dt><h4>品牌 Brand</h4></dt>
+             <dd>所有品牌 All Brand</dd>
+             <dd>国际大牌 Luxury Brand</dd>
+             <dd>设计师品牌 Designer Brand</dd>
+          </dl>
+          <dl>
+           <dt><h4>礼品 Gift</h4></dt>
+           <dd>所有礼品 All Gift</dd>
+           <dd>送给她 For Her</dd>
+           <dd>送给他 For Him</dd>
+           <dd>送给自己 For Myself</dd>
+           <dd>礼品卡 Gift Card</dd>
+           <dd>品牌 Brand</dd>
+         </dl>
+          <dl>
+           <dt><h4>特惠 Sales</h4></dt>
+           <dd>所有特惠 All Sales</dd>
+           <dd>包袋 Bags</dd>
+           <dd>配饰 Accessories</dd>
+           <dd>鞋履 Shoes</dd>
+           <dd>服装 Clothes</dd>
+           <dd>品牌 Brand</dd>
+         </dl>
+       </div>
+    </div>
+    <!-- 二级菜单 -->
+
+    <script>
+      $(function(){ 
+        var top = $(document).scrollTop();
+        window.onscroll=function(){//onscroll
+            if($(document).scrollTop()>150){
+              $(".nonetop").css({
+                  'display':'block'
+              });
+            } else {
+                $(".nonetop").css('display','none');
+            }
+        }
+        navHover();// hover right
+        function navHover(){
+            $('.nonertbox').mouseover(function(){
+              $('.nonenav').css('display','block');
+              $('.nonertbox').mouseout(function(){
+                $('.nonenav').css('display','none');
+              })
+          })
+          $('.nonenav').mouseover(function(){
+            $('.nonertbox').unbind('mouseout');//取消事件
+            $('.nonenav').css('display','block');
+            $('.nonenav').mouseout(function(){//==out
+              $('.nonenav').css('display','none');
+              $('.nonertbox').mouseout(function(){//添加事件
+                $('.nonenav').css('display','none');
+              })
+            })
+          })
+          $('dd').css('cursor','pointer').hover(function(){
+            $(this).css('color','#8E0C3A')
+          },function(){
+            $(this).css('color','#7A7A7A')
+          })
+        }
+        
+
+      })
+    </script>
+
+<!-- =========scrollload====== -->
+  <div class="scroll">
+    <ul class="scrollpic">
+      <li><a href="#"><img src="images/scroll1.jpg"></a></li>
+      <li><a href="#"><img src="images/scroll2.jpg"></a></li>
+      <li><a href="#"><img src="images/scroll3.jpg"></a></li>
+    </ul>
+    <ul class="ball">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="leftbtn">&lt;</div>
+    <div class="rightbtn">&gt;</div>
+  </div>
+<!-- ==男士服饰== -->
+  <div class="meiMen">
+    <div class="meitop">
+      <div class="menword"></div>
+    </div><!-- end -->
+    <div class="menpicBox">
+      <div class="menpic">
+        <img src="images/1.jpg" >
+        <div class="menpicword">
+          <p>Versace 范思哲<br/>
+          服饰精选 潮流先锋
+          </p>
+          <div class="nowshop"></div>
+        </div>
+      </div>
+      <div class="menpic">
+        <img src="images/1.jpg" >
+        <div class="menpicword">
+          <p>Versace 范思哲<br/>
+          服饰精选 潮流先锋
+          </p>
+          <div class="nowshop"></div>
+        </div>
+      </div>
+      <div class="menpic">
+        <img src="images/1.jpg" >
+        <div class="menpicword">
+          <p>Versace 范思哲<br/>
+          服饰精选 潮流先锋
+          </p>
+          <div class="nowshop"></div>
+        </div>
+      </div>
+      <div class="menpic">
+        <img src="images/1.jpg" >
+        <div class="menpicword">
+          <p>Versace 范思哲<br/>
+          服饰精选 潮流先锋
+          </p>
+          <div class="nowshop"></div>
+        </div>
+      </div>
+      <div class="menpic">
+        <img src="images/1.jpg" >
+        <div class="menpicword">
+          <p>Versace 范思哲<br/>
+          服饰精选 潮流先锋
+          </p>
+          <div class="nowshop"></div>
+        </div>
+      </div>
+    </div>
+
+<!-- =========foot====== -->
+ <div class="foote">
+    <div class="footop">
+      <ul class="shop"><!-- shopstart -->
+        <li>
+          <h4>购物指南</h4>
+        </li>
+        <li><a href="">购物流程</a></li>
+        <li><a href="">配送方式</a></li>
+      </ul>
+      <ul class="shop">
+        <li>
+          <h4>购物指南</h4>
+        </li>
+        <li><a href="">购物流程</a></li>
+        <li><a href="">配送方式</a></li>
+      </ul>
+      <ul class="shop">
+        <li>
+          <h4>购物指南</h4>
+        </li>
+        <li><a href="">购物流程</a></li>
+        <li><a href="">配送方式</a></li>
+      </ul>
+      <ul class="shop">
+        <li>
+          <h4>购物指南</h4>
+        </li>
+        <li><a href="">购物流程</a></li>
+        <li><a href="">配送方式</a></li>
+      </ul><!-- shopendend -->
+      <div class="tel"><!-- 订购热线 -->
+        <h4>订购热线</h4>
+        <h4>400-800-1234</h4>
+      </div>
+      <div class="tel kefu"><!-- 在线客服 -->
+        <h4>在线客服</h4>
+        <div class="qq">
+          <span class="qqs"></span>
+          <span class="tels"></span>
+        </div>
+      </div>
+      <!-- 美西APP -->
+      <div class="app">
+        <strong>美西时尚app</strong><br/>
+        <a href="#"></a>
+      </div>
+      <div class="weixin">
+        <strong>关注我们</strong><br/>
+        <a href="#"></a>
+      </div>
+    </div>
+    <!-- footopendend-->
+    <ul class="footul">
+      <li class="ftul">首页</li>
+      <li>关于美西</li>
+      <li>媒体报道</li>
+      <li>关于美西</li>
+      <li>媒体报道</li>
+      <li>关于美西</li>
+      <li>媒体报道</li>
+      <li>关于美西</li>
+      <li>媒体报道</li>
+    </ul>
+   <!-- 支付宝 -->
+   <div class="zfbao">
+   </div>
+   <!-- 版权信息 -->
+   <p class="bqxinxi">Copyright © 2008-2016 美西时尚-<a href="">中国值得信赖的奢侈品购物网站</a><br/><a href="#">沪ICP备09001221号</a>
+   </p>
+   <!-- 安全验证 -->
+   <div class="anq">
+     <div class="anqlt"></div>
+     <div class="anqrt"></div>
+   </div>
+ </div>
+
+</body>
+</html>

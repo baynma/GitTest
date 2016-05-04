@@ -1,0 +1,14 @@
+[
+	  {"id":1,"info":"Versace 范思哲<br/>
+        服饰精选 潮流先锋","price":180.00,"img":"images/1.jpg"},
+  	{"id":2,"info":"Versace 范思哲<br/>
+        服饰精选 潮流先锋","price":190.00,"img":"images/2.jpg"},
+ 	 {"id":3,"info":"Versace 范思哲<br/>
+        服饰精选 潮流先锋","price":210.00,"img":"images/3.jpg"},
+  	{"id":4,"info":"Versace 范思哲<br/>
+        服饰精选 潮流先锋","price":170.00,"img":"images/4.jpg"},
+  	{"id":5,"info":"Versace 范思哲<br/>
+        服饰精选 潮流先锋","price":150.00,"img":"images/5.jpg"},
+ 	 {"id":6,"info":"Versace 范思哲<br/>
+        服饰精选 潮流先锋","price":140.00,"img":"images/6.jpg"}
+]

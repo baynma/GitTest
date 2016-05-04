@@ -1,0 +1,103 @@
+.scroll{/*start*/
+	width:960px;height:500px;
+	margin:10px auto;
+	position:relative;
+	overflow: hidden;
+}
+.scroll .scrollpic{
+	width:2880px;height:500px;
+	position: absolute;
+	z-index:1;
+	left:0;
+	top:0;
+}
+.scroll .scrollpic li {
+	float:left;
+}
+.ball{/*红色小点*/
+	position: absolute;
+	right:20px;
+	bottom:10px;
+}
+.ball li{
+	width:15px;height:15px;
+	border-radius: 50%;
+	float:left;
+	margin-right:10px;background:#ffffff;
+}
+/*btn*/
+.leftbtn,.rightbtn{
+	position: absolute;
+	top:250px;
+	width:35px;
+	line-height:50px;
+	text-align: center;
+	background: rgba(0,0,0,0.2);
+	font-size: 20px;
+	font-weight: 900;
+	cursor: pointer;
+}
+.leftbtn{
+	left:0;
+}
+.rightbtn{
+	right:0;
+}
+/*scrollendend*/
+/*men start*/
+
+.meiMen{
+	width:960px;
+	min-height:50px;height:auto!important;height:50px;
+	margin:auto;
+	overflow: hidden;
+}
+.meiMen .meitop{
+	width:960px;
+	height:38px;
+	background:url(../images/mentop1.jpg)repeat-x left 20px;
+}
+.menword{
+	width:260px;
+	height:38px;
+	margin:0 auto;
+	background:#ffffff url(../images/meitop.jpg)no-repeat center top;
+	cursor: pointer;
+
+}
+.meiMen .menpicBox{
+	width:972px;
+	min-height:50px;height:auto!important;height:50px;
+	margin-top:10px;
+	overflow: hidden;
+	
+	
+}
+.menpic{
+	width:312px;
+	height:248px;
+	border:1px solid #afafaf;
+	cursor: pointer;
+	margin:0 10px 10px 0;
+	float: left;
+}
+.menpic img,.menpicword{
+	width:100%;
+}
+.menpicword{
+	height:54px;
+	
+}
+.menpicword p{
+	display:inline-block;
+	margin:10px 0 0 5px;
+	font-size: 15px;
+}
+.nowshop{
+	width:70px;
+	height:20px;
+	background:url(../images/nowShop.jpg);
+	margin:18px 10px 0 0;
+	float: right;
+}
+
